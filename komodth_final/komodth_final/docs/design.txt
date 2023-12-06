@@ -1,0 +1,400 @@
+Problem Statement: A program will be written which takes in two adjectives, 
+  four verbs, three nouns, a relative’s name, a type of bird, a liquid, a room 
+  in the house, and a body part.  A relative’s name, a room in the house, and a 
+  liquid will be prompts while the rest will be drop down menus with 15 options 
+  each.  After all words are chosen or entered, a button will be pushed that 
+  indicates the user is done and they will be taken to a different screen where 
+  they will see the mad lib, filled in with the words they have chosen.
+
+Nouns: adjectives
+	nouns
+	verbs
+	a relative’s name
+	a type of bird
+	a liquid
+	a room in the house
+	a body part
+
+Verbs:   prompt
+	drop down
+	(button)pushed
+	
+
+Defining Diagram:
+Inputs
+	noun1
+	noun2
+	nounPlural
+	adjective1
+	adjective2
+	roomInHouse
+	typeOfBird
+	liquid
+	relativeName
+	bodyPart
+	verb
+	verbPastTense
+	verbIng	
+	verbIng2	
+
+Processing:
+	Prompt for roomInHouse, liquid, and relative name
+	Accept drop down choices for all other variables listed above
+ 	//Make sure that user hasn't chosen the same noun, adjective, or verb
+          //ending in ing by eliminating that choice in the drop down menu
+	*This proved more complicated than originally thought so it was
+           dropped from the code.
+ 	User pushes button to generate MadLib
+	Display MadLib with user inputs embedded
+
+Output:
+
+	MadLib with user inputs embedded
+
+
+Pseudocode:
+
+mainFunction
+  Initialize noun1
+  Initialize noun2
+  Initialize nounPlural
+  Initialize adjective1
+  Initialize adjective2
+  Initialize roomInHouse
+  Initialize typeOfBird
+  Initialize liquid
+  Initialize relativeName
+  Initialize bodyPart
+  Initialize verb
+  Initialize verbPastTense
+  Initialize verbIng	
+  Initialize verbIng2
+				
+  Prompt for roomInHouse with "Name a room in a house"
+    emptyPromptFunction()
+  Prompt for liquid with "Name a liquid"
+    emptyPromptFunction()
+  Prompt for relativeName with "Type in a relative's name"
+    emptyPromptFunction
+
+emptyPromptFunction
+  WHILE prompt is empty string
+	Display "Please enter a word."
+END
+
+nounFunction
+  Initialize nounArr
+  Create nounArr with 15 nouns inside
+    Display the array inside of a dropdown menu using HTML and Javascript
+    Assign the chosen word to noun1 
+    //Use a switch statement to eliminate the chosen noun from the drop down list:
+    // Where each case is each of the 15 nouns and if true then use push to move 
+     //the remaining words to their own array.
+    // Default is no action
+      *This proved more complicated than originally thought so it was
+           dropped from the code.
+  Return noun1
+END
+
+//buttonFunction *Button function doesn't work because js will not talk to each
+// new js page and I needed each variable to be gathered into the display 
+//message in the end. Will do a full page of drop downs instead *
+// Create a button in HTML to take you to the next dropdown menu
+//END
+
+noun2Function   
+  Display noun dropdown menu now with 14 nouns inside
+    Assign the chosen word to noun2 
+    //Use a switch statement to eliminate the chosen noun from the drop down list:
+     //Where each case is each of the 14 nouns and if true then use push to move 
+     //the remaining words to their own array.
+     //Default is no action
+    *This proved more complicated than originally thought so it was
+           dropped from the code.
+  Return noun2
+END
+
+//buttonFunction()
+
+noun3Function
+  Display noun dropdown menu now with 13 nouns inside
+    Assign the chosen word to nounPlural
+  Return nounPlural
+END
+
+//buttonFunction()
+
+adjectiveFunction
+  Initialize adjArr
+  Create adjArr with 15 adjectives inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to adjective1
+    //Use a for loop to eliminate the chosen adjective from the drop down list:
+      //Where each case is each of the 15 adjectives and if true then use push 
+     //to move the remaining words to their own array.
+      //Default is no action
+     *This proved more complicated than originally thought so it was
+           dropped from the code.
+  Return adjective1
+END
+
+//buttonFunction()
+
+adjective2Function    
+  Display adjective dropdown menu now with 14 adjectives inside
+    Assign the chosen word to adjective2
+  Return adjective2
+END
+
+//buttonFunction()
+
+typOfBirdFunction
+  Initialize birdArr
+  Create birdArr with 15 birds inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to typeOfBird
+  Return typeOfBird
+END
+
+//buttonFunction()
+
+bodyPartFunction 
+  Initialize bodyArr
+  Create bodyArr with 15 body parts inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to bodyPart
+  Return bodyPart
+END
+
+//buttonFunction()
+
+verbFunction
+  Initialize verbArr
+  Create verbArr with 15 verbs inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to verb
+  return verb
+END
+
+//buttonFunction()
+
+verbPastTenseFunction
+  Initialize verbPTArr
+  Create verbPTArr with 15 verbs inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to verbPastTense
+  Return verbPastTense
+END
+
+//buttonFunction()
+
+verbingFunction
+  Initialize verbIngArr
+  Create verbIngArr with 15 verbs inside
+    Display the array in a dropdown menu using HTML and javascript
+    Assign the chosen word to verbIng1
+    //Use a while loop to eliminate the chosen verb from the drop down list:
+      //Where each case is each of the 15 verbs and if true then use push to move
+      //the remaining words to their own array.
+      //Default is no action
+     *This proved more complicated than originally thought so it was
+           dropped from the code.
+  Return verbInng1
+END
+
+//buttonFunction()
+
+verbing2Function
+  Display verbIng dropdown menu now with 14 verbs inside
+    Assign the chosen word to verbIng2
+  Return verbIng2
+END
+
+button2Function
+    Create a button in HTML to take you to the finished MadLib
+END
+
+  Print “It was a “ + adjective + “, cold November day.  I woke up to
+ 	the “ + adjective + “ smell of “ + typeOfBird + “ roasting in the “ 
+	+ roomInHouse + “ downstairs.  I “ + verbPastTense + “ down the stairs 
+	to see if I could help “ + verb + “ the dinner.  My mom told me I should see 
+	if “ + relativeName + “ needs a fresh “ + noun + “. So I carried a 
+	tray of glasses full of “ + liquid + “ into the “ +verbIng + “ room.  
+	When I got there, I couldn not believe my “ + bodyPart + “s! There were “
+	 + nounPlural + "s " + verbIng2 + “ on the “ + noun2 + “!”
+
+END
+
+Test case 1:
+Input:
+  Living room
+  lava
+  Stacie
+  sword
+  cuttlefish
+  skirt
+  playful
+  jealous
+  parrot
+  big toe
+  skydive
+  ran
+  simping
+  shrugging
+
+Output:It was a playful, cold November day.  I woke up to the jealous smell 
+  of parrot roasting in the living room downstairs.  I ran down the stairs 
+  to see if I could help skydive the dinner.  My mom told me I should see if Stacie 
+  needs a fresh sword. So I carried a tray of glasses full of lava into the
+  simping room.  When I got there, I could not believe my big toes! There were 
+  skirts shrugging on the cuttlefish!
+
+Tested output:
+  It was a playful, cold November day. I woke up to the jealous smell 
+  of parrot roasting in the living room downstairs. I ran down the stairs  
+  to see if I could help skydive the dinner. My mom told me I should see if Stacie 
+  needed a fresh sword. So I carried a tray of glasses full of lava into the 
+  simping room. When I got there, I could not believe my big toes! There were 
+  skirts shrugging on the squid!
+
+*I needed to replace cuttlefish with squid because if cuttlefish got chosen for a 
+  plural spot it wouldn't make sense*
+
+Test Case 2:
+Input:
+  fjord
+  potato
+  laptop
+  shady
+  tipsy
+  bathroom
+  chicken
+  tequila
+  Bob
+  elbow
+  jump
+  burned
+  dreaming	
+  screaming
+
+Output:
+  It was a shady, cold November day.  I woke up to the tipsy smell 
+  of chicken roasting in the bathroom downstairs.  I burned down the stairs 
+  to see if I could help jump the dinner.  My mom told me I should see if Bob 
+  needs a fresh fjord. So I carried a tray of glasses full of tequila into the
+  dreaming room.  When I got there, I could not believe my elbows! There were 
+  laptops screaming on the potato!
+
+Test Output:
+  It was a shady, cold November day. I woke up to the tipsy smell
+  of chicken roasting in the bathroom downstairs. I burned down the stairs 
+  to see if I could help jump the dinner. My mom told me I should see if Bob 
+  needed a fresh fjord. So I carried a tray of glasses full of tequila into the 
+  dreaming room. When I got there, I could not believe my elbows! There were 
+  laptops screaming on the potato!
+
+Test Case 3:
+Input:
+  cell phone
+  tuxedo
+  rabbit
+  shy
+  old
+  foyer
+  cockatiel
+  juice
+  Janet
+  eyebrows
+  drool
+  dug
+  grabbing	
+  skidding
+
+Output: 
+  It was a shy, cold November day.  I woke up to the old smell 
+  of cockatiel roasting in the foyer downstairs.  I dug down the stairs 
+  to see if I could help drool the dinner.  My mom told me I should see if Janet 
+  needs a fresh cell phone. So I carried a tray of glasses full of juice into 
+  the grabbing room.  When I got there, I could not believe my eyebrows! There 
+  were rabbits skidding on the tuxedo!
+
+Test Output:
+  It was a shy, cold November day. I woke up to the spiteful smell
+  of cockatiel roasting in the foyer downstairs. I dug down the stairs
+  to see if I could help drool the dinner. My mom told me I should see if Janet 
+  needed a fresh cell phone. So I carried a tray of glasses full of juice into 
+  the grabbing room. When I got there, I could not believe my eyebrows! There
+   were rabbits skidding on the tuxedo!
+  
+**Again I replaced a word. Old wouldn't have worked with 'a' in front of it so
+  I replaced it with spiteful**
+
+Test Case 4:
+Input:
+*originally nothing in the prompt box - reprompted*
+  shoe
+  keg
+  jawbreaker
+  fluffy
+  jarring
+  awfawg
+  crow
+  mkvdjlqpu9
+  FART
+  eye
+  choke
+  eyed
+  flailing	
+  knocking
+
+Output: 
+  It was a fluffy, cold November day.  I woke up to the jarring smell 
+  of crow roasting in the awfawg downstairs.  I eyed down the stairs 
+  to see if I could help choke the dinner.  My mom told me I should see if FART 
+  needs a fresh shoe. So I carried a tray of glasses full of mkvdjlqpu9 into 
+  the flailing room.  When I got there, I could not believe my eyes! There 
+  were kegs knocking on the jawbreaker!
+
+Test Output:
+  It was a fluffy, cold November day. I woke up to the jarring smell 
+  of crow roasting in the awfawg downstairs. I eyed down the stairs 
+  to see if I could help choke the dinner. My mom told me I should see if FART
+  needed a fresh shoe. So I carried a tray of glasses full of mkvdjlqpu9 into 
+  the flailing room. When I got there, I could not believe my eyes! There 
+  were jawbreakers knocking on the keg!
+
+Test Case 5:
+Input:
+  tooth
+  crystal
+  tornado
+  gentle
+  quiet
+  bedroom
+  flamingo
+  spinal fluid
+  Leeroy Jenkins
+  butt
+  stab
+  laughed
+  careening
+  cartwheeling
+  
+Output: 
+  It was a gentle, cold November day.  I woke up to the quiet smell 
+  of flamingo roasting in the bedroom downstairs.  I laughed down the stairs 
+  to see if I could help stab the dinner.  My mom told me I should see if Leeroy Jenkins 
+  needs a fresh tooth. So I carried a tray of glasses full of spinal fluid into 
+  the careening room.  When I got there, I could not believe my butts! There 
+  were crystals cartwheeling on the tornado!	
+
+Test Output:
+  It was a gentle, cold November day. I woke up to the quiet smell 
+  of flamingo roasting in the bedroom downstairs. I laughed down the stairs
+  to see if I could help stab the dinner. My mom told me I should see if Leeroy Jenkins
+  needed a fresh bone. So I carried a tray of glasses full of spinal fluid into 
+  the careening room. When I got there, I could not believe my butts! There
+  were tornados cartwheeling on the crystal!	
+
+***Once again I needed to replace a word.  Tooths wouldn't have made any sense if it got
+  chosen for a plural spot.  I replaced it with bone.***		 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Final Project</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Programming Fundamentals Final</h1>
+        <h2>A Mad Lib</h2>
+      </header>
+
+      <main>
+
+        <p>Click each dropdown menu to pick your words</p>
+
+        <!--Used select id so that I could write arrays in js
+        instead of making lists in html-->
+
+        <p>Noun: <select id="noun1"></select></p>
+        <p>Noun 2: <select id="noun2"></select></p>
+        <p>Noun 3: <select id="nounPlural"></select></p>
+        <p>Adjective: <select id="adjective1"></select></p>
+        <p>Adjective 2: <select id="adjective2"></select></p>
+        <p>Bird: <select id="typeOfBird"></select></p>
+        <p>Body part: <select id="bodyPart"></select></p>
+        <p>Verb: <select id="verb"></select></p>
+        <p>Verb 2: <select id="verbPastTense"></select></p>
+        <p>Verb 3: <select id="verbIng1"></select></p>
+        <p>Verb 4: <select id="verbIng2"></select></p>
+        
+        <!--Calling the function here means it only runs once you press
+        the button-->
+        <p id="sentences"><button onclick="variables()">Get MadLib</button></p>
+      
+        <script src="js/final.js"></script>
+
+      </main>
+    </div>
+  </body>
+</html>                    
